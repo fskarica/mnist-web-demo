@@ -9,8 +9,6 @@ Interactive web-based handwritten digit recognition using neural networks. Draw 
 
 Try it now: [Live Demo](https://fskarica.github.io/mnist-web-demo/)
 
-![Demo Screenshot](assets/demo.png)
-
 ## Features
 
 - Draw digits using adjustable brush size
