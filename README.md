@@ -1,4 +1,3 @@
-
 # Handwritten Digit Classifier (MNIST)
 
 A lightweight browser-based implementation of a handwritten digit classifier using a neural network trained on the MNIST dataset. The model runs entirely in your browser with no external dependencies.
@@ -45,11 +44,32 @@ python -m http.server 8000
 
 ## Deploy to GitHub Pages
 
-1. Fork or clone this repository
-2. Go to **Settings → Pages**
-3. Set source to **Deploy from a branch**
-4. Select **main** branch and **/** (root) folder
-5. Your site will be available at `https://<username>.github.io/<repo>/`
+1. Create a new repository on GitHub:
+   - Go to github.com and click "New repository"
+   - Name it `mnist-web-demo`
+   - Keep it public
+   - Don't initialize with any files
+
+2. Initialize your local repository and push to GitHub:
+   ```bash
+   git init
+   git add .
+   git commit -m "Initial commit"
+   git branch -M main
+   git remote add origin https://github.com/fskarica/mnist-web-demo.git
+   git push -u origin main
+   ```
+
+3. Enable GitHub Pages:
+   - Go to your repository's **Settings**
+   - Navigate to **Pages** in the left sidebar
+   - Under "Source", select **Deploy from a branch**
+   - Choose **main** branch and **/** (root) folder
+   - Click **Save**
+
+4. Your site will be published at:
+   `https://fskarica.github.io/mnist-web-demo/`
+   (It might take a few minutes to become available)
 
 ## Usage Tips
 
