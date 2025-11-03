@@ -27,15 +27,6 @@ Try it now: [Live Demo](https://fskarica.github.io/mnist-web-demo/)
 4. Use the brush size slider to adjust stroke thickness
 5. Click "Clear" to try another digit
 
-## Local Development
-
-```bash
-git clone https://github.com/fskarica/mnist-web-demo.git
-cd mnist-web-demo
-python -m http.server 8000
-# Open http://localhost:8000 in your browser
-```
-
 ## Technical Details
 
 - Browser-based neural network (784 → 10 → 10)
