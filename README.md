@@ -81,11 +81,3 @@ python -m http.server 8000
 ## Author
 
 Created by Fran Škarica
-
-## License
-
-MIT License
-
-## License
-
-MIT

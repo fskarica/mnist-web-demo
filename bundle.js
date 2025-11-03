@@ -1,4 +1,3 @@
-
 // ===== utils.js =====
 function relu(v){
   if (!v || v.some(x => isNaN(x))) {
@@ -187,7 +186,7 @@ async function loadWeights(){
 
         console.log('Attempting to load weights...');
         try {
-            const res = await fetch('./assets/weights/mnist_weights.json');
+            const res = await fetch('/mnist-web-demo/assets/weights/mnist_weights.json');
             if (!res.ok) {
                 console.warn('Could not load weights file, using default initialization');
                 return defaultWeights;
