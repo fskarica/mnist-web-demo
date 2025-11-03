@@ -1,0 +1,94 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Handwritten Digit Classifier — MNIST (Browser)</title>
+    <meta name="description" content="Draw a digit (0–9). The model runs in your browser using your trained weights.">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Handwritten Digit Classifier</h1>
+        <div><small>Pure JS · 2‑layer NN · MNIST</small></div>
+      </div>
+
+      <div class="card">
+        <div class="grid">
+          <div>
+            <canvas id="draw"></canvas>
+            <div class="controls">
+              <button id="btn-predict" class="primary">Predict</button>
+              <button id="btn-clear">Clear</button>
+              <label class="checkbox">
+                <input id="toggle-invert" type="checkbox" checked />
+                <span>Invert (MNIST style)</span>
+              </label>
+              <span class="kbd">Tip: drag mouse / finger to draw</span>
+            </div>
+          </div>
+          <div>
+            <div class="row">
+              <h3 style="margin:0">Prediction</h3>
+            </div>
+            <div class="row" style="gap:6px;margin-top:6px">
+              <div>Digit:</div>
+              <div class="kbd" style="font-size:20px" id="guess">—</div>
+              <div class="kbd" id="confidence">—</div>
+            </div>
+            <div id="probs"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tabs">
+        <div class="tab active" data-for="how">How it works</div>
+        <div class="tab" data-for="code">Source</div>
+        <div class="tab" data-for="about">About</div>
+      </div>
+
+      <section id="how" class="card"></section>
+
+      <section id="code" class="card" hidden>
+        <h3>Key files</h3>
+        <p><code>src/nn.js</code> (forward pass), <code>src/app.js</code> (UI + preprocessing), <code>src/utils.js</code> (ops), and your weights at <code>assets/weights/mnist_weights.json</code>.</p>
+        <details open>
+          <summary><strong>src/utils.js</strong></summary>
+          <pre><code id="code-utils"></code></pre>
+        </details>
+        <details>
+          <summary><strong>src/nn.js</strong></summary>
+          <pre><code id="code-nn"></code></pre>
+        </details>
+        <details>
+          <summary><strong>src/app.js</strong></summary>
+          <pre><code id="code-app"></code></pre>
+        </details>
+        <script type="module">
+          const show = async (id, path)=>{
+            const t = await fetch(path).then(r=>r.text());
+            document.getElementById(id).textContent = t;
+          };
+          show('code-utils','./src/utils.js');
+          show('code-nn','./src/nn.js');
+          show('code-app','./src/app.js');
+        </script>
+      </section>
+
+      <section id="about" class="card" hidden>
+        <h3>About this demo</h3>
+        <p>This is a lightweight, professional demo focused on clarity rather than flash.
+        It loads your trained weights and performs inference entirely in the browser.
+        No external ML libraries, no tracking, and no unnecessary visual noise.</p>
+      </section>
+
+      <div class="footer">
+        <small>MIT © Your Name</small>
+      </div>
+    </div>
+
+    <script type="module" src="./src/app.js"></script>
+  </body>
+</html>

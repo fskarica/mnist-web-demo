@@ -1,0 +1,44 @@
+
+:root{
+  --bg:#0b0d10;
+  --panel:#14181d;
+  --ink:#e8edf2;
+  --muted:#9aa4af;
+  --accent:#75b3ff;
+  --ok:#48d597;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font:16px/1.5 ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,'Helvetica Neue','Noto Sans','Apple Color Emoji','Segoe UI Emoji';}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1100px;margin:40px auto;padding:0 20px}
+.header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px}
+h1{font-size:28px;margin:0}
+.card{background:var(--panel);border-radius:16px;padding:16px;box-shadow:0 8px 24px rgba(0,0,0,.35);}
+.grid{display:grid;grid-template-columns:1.2fr .8fr;gap:16px}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 12px}
+button,.toggle{
+  background:#1e242b;border:1px solid #2a323c;color:var(--ink);
+  padding:10px 14px;border-radius:10px;cursor:pointer
+}
+button:hover{background:#232a33}
+button.primary{background:#2a69ff;border-color:#2a69ff}
+button.primary:hover{filter:brightness(1.05)}
+small{color:var(--muted)}
+canvas#draw{background:#000;border-radius:12px;touch-action: none;}
+.row{display:flex;gap:12px;align-items:center}
+#probs{display:grid;grid-template-columns:repeat(10,1fr);gap:8px;margin-top:16px}
+.prob{background:#1a2027;border:1px solid #2a323c;border-radius:10px;padding:10px;text-align:center;font-size:18px}
+.prob .bar{width:100%;height:8px;background:#0f1216;border-radius:8px;overflow:hidden;margin-top:8px}
+.prob .bar > span{display:block;height:100%;background:var(--accent);transition:width .25s ease}
+.prob.best{outline:2px solid var(--ok)}
+.kbd{padding:2px 6px;border:1px solid #2a323c;border-radius:6px;background:#151a20;color:var(--ink);font-size:12px}
+.tabs{display:flex;gap:8px;margin:20px 0}
+.tab{padding:10px 12px;border-radius:10px;background:#1e242b;border:1px solid #2a323c;cursor:pointer}
+.tab.active{background:#2a323c}
+section[hidden]{display:none}
+code,pre{font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas, "Liberation Mono","Courier New",monospace}
+pre{background:#0e1115;border:1px solid #1e2530;border-radius:12px;padding:12px;overflow:auto}
+.footer{color:var(--muted);margin:24px 0 8px}
+.note{border-left:3px solid #2a69ff;padding-left:12px;margin:12px 0}
+.checkbox{display:flex;align-items:center;gap:8px}

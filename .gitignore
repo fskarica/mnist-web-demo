@@ -1,0 +1,13 @@
+
+# Dependencies / OS junk
+.DS_Store
+Thumbs.db
+
+# Build & tooling
+node_modules/
+dist/
+*.log
+
+# Editors
+.vscode/
+.idea/
